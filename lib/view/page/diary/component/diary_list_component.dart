@@ -1,42 +1,69 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:riverpod_fooks_sample_app/models/db/diary_local_database.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_fooks_sample_app/data/resource/diary_resource.dart';
+import 'package:riverpod_fooks_sample_app/route/main_route.dart';
+import 'package:riverpod_fooks_sample_app/route/use_router.dart';
+import 'package:riverpod_fooks_sample_app/view/theme/app_text_theme.dart';
+import 'package:riverpod_fooks_sample_app/view/theme/app_theme.dart';
+import 'package:riverpod_fooks_sample_app/viewmodels/diary_viewmodel.dart';
 
-Widget diaryListComponent(List<DiaryData> diaryData) {
-  return ListView.builder(
+class DiaryListComponent extends HookConsumerWidget {
+  /// 日記一覧コンポーネント
+  const DiaryListComponent({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = ref.watch(appThemeProvider);
+    final list = ref.watch(diaryStateProvider);
+
+    final router = useRouter();
+
+    return ListView.builder(
       shrinkWrap: true,
       physics: const AlwaysScrollableScrollPhysics(),
       scrollDirection: Axis.vertical,
-      itemCount: diaryData.length,
+      itemCount: list.diaryList!.length,
       itemBuilder: (BuildContext context, int index) {
         return Card(
+          color: theme.appColors.diaryListBackground,
           margin: const EdgeInsets.symmetric(vertical: 4),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              ref.read(diaryDataProvider.notifier).state =
+                  list.diaryList![index];
+              router.push(const DiaryDetailScreenRoute());
+            },
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          // Navigator.of(context).push(
-                          //   UserInfoScreen.route(
-                          //       userId: article[index].user.userId),
-                          // );
-                        },
-                      ),
-                      Text(diaryData[index].title),
-                      const SizedBox(width: 8),
-                    ],
+                  const SizedBox(width: 8),
+                  Text(
+                    list.diaryList![index].title,
+                    style: theme.textTheme.h50.bold(),
+                    maxLines: 1,
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(width: 8),
+                  Text(
+                    list.diaryList![index].body,
+                    style: theme.textTheme.h30,
+                    maxLines: 2,
+                  ),
+                  const SizedBox(width: 16),
+                  Text(
+                    DiaryResouce.monthAndDayText
+                        .format(list.diaryList![index].createdAt),
+                    style: theme.textTheme.h30,
+                  ),
+                  const SizedBox(width: 8),
                 ],
               ),
             ),
           ),
         );
-      });
+      },
+    );
+  }
 }

@@ -9,6 +9,8 @@ import 'package:riverpod_fooks_sample_app/models/db/table/diary_table.dart';
 
 part 'diary_local_database.g.dart';
 
+final diaryDBProvider = Provider((ref) => DiaryLocalDatabase());
+
 /// LocalDBの基本データを設定
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {

@@ -13,29 +13,65 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+
+  # Default
   cupertino_icons: ^1.0.2
-  riverpod: ^2.1.1
-  flutter_riverpod: ^2.1.1
+  flutter_launcher_icons: ^0.11.0
+  google_fonts: ^3.0.1
+
+  # architecture
   hooks_riverpod: ^2.1.1
   flutter_hooks: ^0.18.5+1
-  password_credential: ^0.3.2
+
+  # LocalDB
   drift: ^2.3.0
   path_provider: ^2.0.11
   sqlite3_flutter_libs: ^0.5.0
-  json_annotation: ^4.7.0
-  freezed_annotation: ^2.2.0
   path: ^1.8.2
   date_format: ^2.0.7
+
+  # Model
+  json_annotation: ^4.7.0
+  freezed_annotation: ^2.2.0
+
+  # 無限スクロール
+  infinite_scroll_pagination: ^3.2.0
+
+  # Enum ⇨ String
+  enum_to_string: ^2.0.1
+
+  # Auto Route
+  auto_route: ^5.0.4
+
+  # DateFormat
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_lints: ^2.0.0
+
+  # BuildRunner
   build_runner: ^2.3.2
 
-  flutter_lints: ^2.0.0
+  # architecture
   json_serializable: ^6.5.4
   freezed: ^2.3.1
+
+  # LocalDB
   drift_dev: ^2.3.2
 
+  # FlutterGen
+  flutter_gen_runner: ^5.1.0+1
+
+  # AoutRouteGen
+  auto_route_generator: ^5.0.3
+
 flutter:
+  uses-material-design: true
+  fonts:
+    - family: Rotunda
+      fonts:
+        - asset: assets/fonts/Rotunda-Bold.otf
+          weight: 700
