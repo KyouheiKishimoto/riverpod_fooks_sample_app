@@ -18,7 +18,7 @@ class DiaryInsertViewModel {
 
   DiaryInsertViewModel(this.ref);
 
-  late final DiaryRepository _repository = ref.watch(diaryRepository.notifier);
+  late final DiaryRepository _repository = ref.watch(diaryRepository);
 
   final router = useRouter();
 

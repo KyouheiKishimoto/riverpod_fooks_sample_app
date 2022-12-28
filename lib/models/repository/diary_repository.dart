@@ -6,7 +6,7 @@ import 'package:riverpod_fooks_sample_app/providers/load_status_provider.dart';
 
 // final newsRepositoryProvider = ChangeNotifierProvider((ref) => DiaryRepository());
 
-final diaryRepository = StateNotifierProvider((ref) {
+final diaryRepository = Provider((ref) {
   final dao = ref.read(diaryDaoProvider);
   return DiaryRepository(ref, dao);
 });

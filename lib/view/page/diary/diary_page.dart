@@ -11,6 +11,7 @@ import 'package:riverpod_fooks_sample_app/view/page/diary/component/diary_list_c
 import 'package:riverpod_fooks_sample_app/view/theme/app_text_theme.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_theme.dart';
 import 'package:riverpod_fooks_sample_app/viewmodels/diary_viewmodel.dart';
+import 'package:riverpod_fooks_sample_app/flavors.dart';
 
 import 'component/none_diary_list_component.dart';
 
@@ -39,7 +40,7 @@ class DiaryPage extends HookConsumerWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            DiaryResouce.appBarTitle,
+           F.title,
             style: theme.textTheme.appTitle.bold(),
           ),
         ),

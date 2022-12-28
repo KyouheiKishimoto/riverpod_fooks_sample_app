@@ -17,7 +17,7 @@ final diaryDataProvider = StateProvider<DiaryData>(
 class DiaryViewModel extends StateNotifier<DiaryModel> {
   late final Ref ref;
 
-  late final DiaryRepository _repository = ref.watch(diaryRepository.notifier);
+  late final DiaryRepository _repository = ref.watch(diaryRepository);
 
   DiaryViewModel(this.ref) : super(DiaryModel());
 

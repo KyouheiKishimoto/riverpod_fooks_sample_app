@@ -46,6 +46,10 @@ dependencies:
   # DateFormat
   intl: ^0.17.0
 
+  # Flavor
+  flutter_flavor: ^3.1.1
+  flutter_flavorizr: ^2.1.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -75,3 +79,30 @@ flutter:
       fonts:
         - asset: assets/fonts/Rotunda-Bold.otf
           weight: 700
+
+# Flavorの設定
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+      flavorDimensions: "flavor-type"
+
+  flavors:
+    develop:
+      app:
+        name: "DebugApp"
+
+      android:
+        applicationId: "com.example.testapp.dev"
+      ios:
+        bundleId: "com.example.testapp.dev"
+
+    production:
+      app:
+        name: "kyom日記"
+
+      android:
+        applicationId: "com.example.testapp"
+      ios:
+        bundleId: "com.example.testapp"
