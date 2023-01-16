@@ -50,6 +50,9 @@ dependencies:
   flutter_flavor: ^3.1.1
   flutter_flavorizr: ^2.1.5
 
+  # ShardPreferences
+  shared_preferences: ^2.0.0-nullsafety
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

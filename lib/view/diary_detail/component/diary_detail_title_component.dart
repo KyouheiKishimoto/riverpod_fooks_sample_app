@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_text_theme.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_theme.dart';
-import 'package:riverpod_fooks_sample_app/viewmodels/diary_viewmodel.dart';
+import 'package:riverpod_fooks_sample_app/viewmodels/diary/diary_viewmodel.dart';
 
 class DiaryDetailTitleComponent extends HookConsumerWidget {
   /// 日記詳細 - タイトルコンポーネント

@@ -7,10 +7,11 @@ import 'package:riverpod_fooks_sample_app/models/model/diary_model.dart';
 import 'package:riverpod_fooks_sample_app/providers/load_status_provider.dart';
 import 'package:riverpod_fooks_sample_app/route/main_route.dart';
 import 'package:riverpod_fooks_sample_app/route/use_router.dart';
+import 'package:riverpod_fooks_sample_app/shard_preference/test_shard_preference.dart';
 import 'package:riverpod_fooks_sample_app/view/page/diary/component/diary_list_component.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_text_theme.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_theme.dart';
-import 'package:riverpod_fooks_sample_app/viewmodels/diary_viewmodel.dart';
+import 'package:riverpod_fooks_sample_app/viewmodels/diary/diary_viewmodel.dart';
 import 'package:riverpod_fooks_sample_app/flavors.dart';
 
 import 'component/none_diary_list_component.dart';
@@ -24,6 +25,8 @@ class DiaryPage extends HookConsumerWidget {
     final theme = ref.watch(appThemeProvider);
 
     final router = useRouter();
+
+    // print(ref.watch(sharedPreferenceProvider).get('title'));
 
     // 一度のみ実行する処理
     useEffect(() {

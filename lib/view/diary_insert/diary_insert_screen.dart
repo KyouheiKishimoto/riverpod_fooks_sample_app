@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_fooks_sample_app/data/common/load_status.dart';
 import 'package:riverpod_fooks_sample_app/data/resource/diary_resource.dart';
 import 'package:riverpod_fooks_sample_app/models/model/diary_model.dart';
+import 'package:riverpod_fooks_sample_app/providers/diary_insert_provider/diary_insert_provider.dart';
 import 'package:riverpod_fooks_sample_app/providers/load_status_provider.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_text_theme.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_theme.dart';

@@ -1,16 +1,10 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_fooks_sample_app/models/db/diary_local_database.dart';
 import 'package:riverpod_fooks_sample_app/models/repository/diary_repository.dart';
+import 'package:riverpod_fooks_sample_app/providers/diary_insert_provider/diary_insert_provider.dart';
 import 'package:riverpod_fooks_sample_app/route/use_router.dart';
-
-/// DiaryInsertProvider
-final diaryInsertProvider = StateProvider((ref) {
-  return DiaryInsertViewModel(ref);
-});
-
-/// 日記のタイトル・本文のProvider
-final diaryTitleProvider = StateProvider<String>((ref) => "");
-final diaryBodyProvider = StateProvider<String>((ref) => "");
+import 'package:riverpod_fooks_sample_app/shard_preference/test_shard_preference.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 /// DiaryInsert
 class DiaryInsertViewModel {
@@ -20,10 +14,13 @@ class DiaryInsertViewModel {
 
   late final DiaryRepository _repository = ref.watch(diaryRepository);
 
+  // late final SharedPreferences _sharedPreferences = ref.watch(sharedPreferenceProvider);
+
   final router = useRouter();
 
   /// 日記をインサート
   insertDiaryData() async {
+    // _sharedPreferences.setString('title', ref.read(diaryTitleProvider),);
     if (isDiaryData()) {
       final diaryData = DiaryData(
           title: ref.read(diaryTitleProvider),

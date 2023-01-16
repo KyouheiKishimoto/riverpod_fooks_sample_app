@@ -6,7 +6,7 @@ import 'package:riverpod_fooks_sample_app/route/main_route.dart';
 import 'package:riverpod_fooks_sample_app/route/use_router.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_text_theme.dart';
 import 'package:riverpod_fooks_sample_app/view/theme/app_theme.dart';
-import 'package:riverpod_fooks_sample_app/viewmodels/diary_viewmodel.dart';
+import 'package:riverpod_fooks_sample_app/viewmodels/diary/diary_viewmodel.dart';
 
 class DiaryListComponent extends HookConsumerWidget {
   /// 日記一覧コンポーネント

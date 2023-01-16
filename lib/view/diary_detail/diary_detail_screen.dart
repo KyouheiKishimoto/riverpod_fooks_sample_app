@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_fooks_sample_app/data/resource/diary_resource.dart';
 import 'package:riverpod_fooks_sample_app/view/diary_detail/component/diary_detail_title_component.dart';
-import 'package:riverpod_fooks_sample_app/viewmodels/diary_viewmodel.dart';
+import 'package:riverpod_fooks_sample_app/viewmodels/diary/diary_viewmodel.dart';
 
 import 'component/diary_detail_component.dart';
 

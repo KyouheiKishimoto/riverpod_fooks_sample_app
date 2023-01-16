@@ -12,7 +12,6 @@ class App extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(appThemeProvider);
     final appRouter = useMemoized(() => MainRouter());
-    print(appThemeModeProvider);
 
     return MaterialApp.router(
       theme: theme.data,
