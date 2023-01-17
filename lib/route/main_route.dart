@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:riverpod_fooks_sample_app/view/diary_detail/diary_detail_screen.dart';
-import 'package:riverpod_fooks_sample_app/view/diary_insert/diary_insert_screen.dart';
-import 'package:riverpod_fooks_sample_app/view/main_screen.dart';
-import 'package:riverpod_fooks_sample_app/view/page/calender/calender_page.dart';
-import 'package:riverpod_fooks_sample_app/view/page/diary/diary_page.dart';
-import 'package:riverpod_fooks_sample_app/view/page/setting/setting_page.dart';
+import 'package:riverpod_fooks_sample_app/pages/diary_detail/diary_detail_screen.dart';
+import 'package:riverpod_fooks_sample_app/pages/diary_insert/diary_insert_screen.dart';
+import 'package:riverpod_fooks_sample_app/pages/page/calender/calender_page.dart';
+import 'package:riverpod_fooks_sample_app/pages/page/diary/diary_page.dart';
+import 'package:riverpod_fooks_sample_app/pages/page/setting/setting_page.dart';
+import 'package:riverpod_fooks_sample_app/pages/main_screen.dart';
 
 // exportしないと動かない
 export 'main_route.gr.dart';
@@ -16,6 +16,7 @@ export 'main_route.gr.dart';
     AutoRoute(
       path: '/',
       page: MainScreen,
+      initial: true,
       children: [
         AutoRoute(path: 'diary', page: DiaryPage, initial: true),
         AutoRoute(path: 'calender', page: CalenderPage),

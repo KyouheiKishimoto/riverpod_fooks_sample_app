@@ -7,18 +7,18 @@ import 'flavors.dart';
 
 void main() async {
   F.appFlavor = Flavor.PRODUCTION;
-  // late final SharedPreferences sharedPreferences;
+  late final SharedPreferences sharedPreferences;
 
-  // await Future.wait({
-  //   Future(() async {
-  //     sharedPreferences = await SharedPreferences.getInstance();
-  //   }),
-  // });
+  await Future.wait({
+    Future(() async {
+      sharedPreferences = await SharedPreferences.getInstance();
+    }),
+  });
   runApp(
     ProviderScope(
-      // overrides: [
-      //   sharedPreferenceProvider.overrideWithValue(sharedPreferences),
-      // ],
+      overrides: [
+        sharedPreferenceProvider.overrideWithValue(sharedPreferences),
+      ],
       child: MaterialApp(home: App()),
     ),
   );
