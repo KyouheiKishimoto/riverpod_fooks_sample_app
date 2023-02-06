@@ -1,6 +1,8 @@
 enum Flavor {
   DEVELOP,
   PRODUCTION,
+  SETSTATE,
+  PROVIDER,
 }
 
 class F {
@@ -14,8 +16,12 @@ class F {
         return 'DebugApp';
       case Flavor.PRODUCTION:
         return 'kyom日記';
+      case Flavor.SETSTATE:
+        return 'setState';
+      case Flavor.PROVIDER:
+        return 'Provider';
       default:
-        return 'DebugApp';
+        return 'title';
     }
   }
 

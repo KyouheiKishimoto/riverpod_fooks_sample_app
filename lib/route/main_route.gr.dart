@@ -13,16 +13,16 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:flutter/material.dart' as _i8;
-import 'package:riverpod_fooks_sample_app/view/diary_detail/diary_detail_screen.dart'
+import 'package:riverpod_fooks_sample_app/pages/diary_detail/diary_detail_screen.dart'
     as _i2;
-import 'package:riverpod_fooks_sample_app/view/diary_insert/diary_insert_screen.dart'
+import 'package:riverpod_fooks_sample_app/pages/diary_insert/diary_insert_screen.dart'
     as _i3;
-import 'package:riverpod_fooks_sample_app/view/main_screen.dart' as _i1;
-import 'package:riverpod_fooks_sample_app/view/page/calender/calender_page.dart'
+import 'package:riverpod_fooks_sample_app/pages/main_screen.dart' as _i1;
+import 'package:riverpod_fooks_sample_app/pages/page/calender/calender_page.dart'
     as _i5;
-import 'package:riverpod_fooks_sample_app/view/page/diary/diary_page.dart'
+import 'package:riverpod_fooks_sample_app/pages/page/diary/diary_page.dart'
     as _i4;
-import 'package:riverpod_fooks_sample_app/view/page/setting/setting_page.dart'
+import 'package:riverpod_fooks_sample_app/pages/page/setting/setting_page.dart'
     as _i6;
 
 class MainRouter extends _i7.RootStackRouter {
